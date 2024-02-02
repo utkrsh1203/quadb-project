@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
+  const navigate = useNavigate();
   return (
     <div className='relative flex flex-col justify-center min-h-screen overflow-hidden'>
       <div className='w-full p-6 m-auto bg-white rounded-md shadow-xl  ring-2 ring-indigo-600 lg:max-w-xl'>
@@ -57,7 +59,10 @@ const Form = () => {
             />
           </div>
           <div className='mt-6'>
-            <button className='w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-teal-400 rounded-md hover:bg-teal-500 focus:outline-none focus:bg-teal-500'>
+            <button
+              className='w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-teal-400 rounded-md hover:bg-teal-500 focus:outline-none focus:bg-teal-500'
+              onClick={() => navigate("/")}
+            >
               Confirm Booking{" "}
             </button>
           </div>
